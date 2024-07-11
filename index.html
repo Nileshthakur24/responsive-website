@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THAPA EDUHUB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+        :root {
+            --maiN-color: #0353d3;
+            --supportiNg-color: #ebf3fe;
+            --foNt-color: #424242;
+            --bg-color: #ffffff;
+            --headiNg-color: #000a19;
+            --para-color: #504e4d;
+            --white-color: #ffffff;
+            --btN-hover-bg-color: #003b99;
+            --btN-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            --hero-headiNg: #032b6a;
+
+        }
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "urbaNist", sans-serif;
+
+            /* background-color: #343639; */
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 0%;
+            margin: 0%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            font-size: 60%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Poppins", sans-serif;
+        }
+
+        p,
+        li,
+        a {
+            font-family: "urbaNist", sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .coNtaiNer {
+            max-width: 142rem;
+            margin: 0 auto;
+            margin-left: 15rem;
+            padding: 9.6rem 2.4rem;
+        }
+
+        .sectioN-Navbar {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+            & .Navbar {
+                margin-right: 5rem;
+            }
+        }
+
+        .sectioN-Navbar .coNtaiNer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 0;
+        }
+
+        .sectioN-Navbar .Navbar ul {
+            display: flex;
+            gap: 3.2rem;
+            text-decoration: none;
+
+            list-style-type: none;
+
+            & li a {
+                color: var(--headiNg-color);
+                text-transform: uppercase;
+                font-weight: 600;
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.3rem;
+                    left: 0;
+                    width: 0%;
+                    border-bottom: 0.2rem solid var(--maiN-color);
+
+                }
+            }
+
+            & li a:hover::after {
+                width: 100%;
+                transition: all 0.5s linear;
+            }
+
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-two--cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .btN {
+            padding: 1.2rem 3.2rem;
+            background-color: var(--maiN-color);
+            display: inline-block;
+            color: var(--supportiNg-color);
+            border-radius: 0.6rem;
+        }
+
+        .btN:hover {
+            background-color: var();
+            cursor: pointer;
+            box-shadow: var(--btN-box-shadow);
+        }
+
+        main {
+            background-image: linear-gradient(to top right,
+                    #3d86fa,
+                    #4484fb,
+                    #679eff,
+                    #b3d2ff,
+                    #ebf3fe);
+
+            position: relative;
+        }
+
+        .hero-sectioN-image img {
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+        }
+
+        .sectioN-hero .grid {
+            place-items: ceNter;
+            gap: 6.4rem;
+            /* background-color: aqua; */
+
+            & .hero-subheadiNg {
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                font-size: 1.7rem;
+                word-spacing: .2rem;
+                color: var(--btN-hover-bg-color);
+                font-weight: 700;
+            }
+
+            & .hero-headiNg {
+                font-size: 5.8rem;
+                font-family: "urbaNist";
+                color: var(--hero-headiNg);
+                font-weight: 900;
+                line-height: 1.5;
+            }
+
+            & .hero-para {
+                margin: 2rem 0 4rem;
+                color: var(--white-color);
+            }
+        }
+
+        .custom-shape-divider-bottom-1720680733 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1720680733 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 164px;
+        }
+
+        .custom-shape-divider-bottom-1720680733 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        .sectioN-commoN-headiNg {
+            font-size: 3.2rem;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .section-about img {
+            padding: 2.4rem;
+            background-color: var(--supportiNg-color);
+            width: 15rem;
+            border-radius: 50%;
+        }
+
+        .sectioN-commoN-title {
+            font-size: 2rem;
+            margin: 4rem 0 1.2rem 0;
+        }
+
+        .coNtaiNer2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .grid-three-cols {
+            grid-template-columns: repeat(3, 1fr);
+            /* gap: 20rem; */
+        }
+
+        .grid-two-cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        .section-about .grid {
+            gap: 6.4rem;
+        }
+
+        .icoN img:hover {
+            transform: rotate(360deg);
+            background: radial-gradient(#052861,
+                    #1458d7,
+                    #ced8e8,
+                    #134186,
+                    #032e69);
+            transition: all .3s linear;
+        }
+
+        .fa-brands {
+            padding: 2.4rem;
+            background-color: rgb(226, 217, 217);
+            font-size: 3rem;
+            border-radius: 50%;
+            color: var(--hero-headiNg);
+        }
+
+        .grid-four--cols {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3.2rem;
+
+
+        }
+
+        .section-course .course-div:hover {
+            box-shadow: var(--btN-box-shadow);
+            /* background-color: teal; */
+        }
+
+        .section-course .course-div {
+            padding: 2.4rem;
+        }
+
+        .course-div:nth-child(1) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(246, 65, 10);
+        }
+
+        .course-div:nth-child(2) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(221, 245, 5);
+        }
+
+        .course-div:nth-child(3) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(10, 14, 246);
+        }
+
+        .course-div:nth-child(4) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(246, 10, 195);
+        }
+
+        .course-div:nth-child(5) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(10, 246, 30);
+        }
+
+        .course-div:nth-child(6) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(66, 4, 253);
+        }
+
+        .course-div:nth-child(7) .icoN .fa-brands {
+            color: rgb(239, 242, 244);
+            background-color: rgb(246, 10, 10);
+        }
+
+        .commoN-text-highlights {
+            width: 6rem;
+            aspect-ratio: 1;
+            background-color: var(--supportiNg-color);
+            color: var(--maiN-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            font-weight: 700;
+            border-radius: 100%;
+        }
+
+        .section-why-choose .text-aligN--right .why-choose--div {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+            text-align: right;
+        }
+
+        .choose-ceNter--div .grid {
+            gap: 9.6rem;
+        }
+
+        .thapamobile {
+            height: 60rem;
+        }
+
+        .face {
+            display: flex;
+            justify-content: center;
+            /* flex-direction: column; */
+            /* align-items: center; */
+            margin-top: 5rem;
+            /* background-color: tomato; */
+            /* gap: -3rem; */
+        }
+
+        .why-choose--div {
+            /* background-color: gold; */
+            align-items: end;
+            /* display: flex; */
+            margin-left: 10rem;
+        }
+
+        .col1,
+        .col3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            gap: 2rem;
+        }
+
+        .col3 {
+            margin-left: 8rem;
+        }
+
+        .col1 {
+            margin-left: 10rem;
+        }
+
+        figure {
+            /* color: #003b99; */
+
+        }
+
+        .sectioN-hero {
+            /* height: 700px; */
+        }
+
+        .sectioN-coNtact-homepage {
+
+            width: 60%;
+            min-height: 37rem;
+            margin: 0 auto;
+            margin-top: 8rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            display: flex;
+            gap: 5rem;
+            padding: 5rem;
+            height: 10rem;
+
+            .grid {
+                align-items: center;
+            }
+
+            & .coNtact-image {
+                margin-top: 2rem;
+            }
+
+            & .coNtact-title {
+                font-size: 3rem;
+                /* line-height: 1rem; */
+                display: inline;
+            }
+        }
+
+        .img {
+            height: 20rem;
+            width: auto;
+        }
+
+        .coNtact-coNteNt {
+            margin-top: 4rem;
+        }
+
+        .grid-four-cols {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16rem;
+        }
+
+        .fa-brands {
+            background-color: rgb(241, 238, 238);
+            color: var(--white-color);
+            font-size: 1.9rem;
+            color: #000a19;
+
+        }
+
+        .fa-brands:hover {
+            background-color: rgb(9, 50, 108);
+            color: white;
+            transition: all 0.2s linear;
+            transform: rotate(360deg);
+
+
+        }
+
+        footer {
+            background-color: #000a19;
+            color: white;
+            margin-top: 10rem;
+            height: 40rem;
+        }
+
+        ::-webkit-scrollbar {
+            width: 1.3rem;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0f1f2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0707f4;
+            border-radius: 40px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0416a1;
+            border-radius: 40px;
+        }
+
+        .footer {
+            height: 100vh;
+        }
+
+        @media (max-width:1330px) {
+            html {
+                font-size: 50%;
+            }
+
+            .sectioN-hero img {
+                width: 90%;
+            }
+
+            .custom-shape-divider-bottom-1720680733 svg {
+                height: 10rem;
+            }
+
+
+        }
+
+        @media (width<1200px) {
+            html {
+                font-size: 47%;
+            }
+
+        }
+
+        @media (width<1100px) {
+            .sectioN-hero {
+                height: auto;
+
+                & .grid-two--cols {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .grid-four--cols {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            & .sectioN-hero img {
+                /* width: 50%; */
+                order: 1;
+                margin-top: -1rem;
+                margin-bottom: 12rem;
+
+                & .hero-sectioN-image .img {
+                    height: 50rem;
+
+                }
+
+            }
+
+            & .hero-para {
+                flex-wrap: wrap;
+                width: 70%;
+            }
+
+            & .hero-headiNg {
+                width: 50%;
+            }
+
+            & .sectioN-hero--coNteNt {
+                order: 2;
+                margin-top: 55rem;
+            }
+
+            .foNt-icoNs {
+                display: flex;
+                /* flex-direction: column; */
+                gap: 2rem;
+            }
+
+
+
+        }
+
+        @media (width<760px) {
+
+            .grid-two--cols,
+            .grid-three-cols {
+                grid-template-columns: 1fr;
+            }
+
+            .sectioN-Navbar .coNtaiNer {
+                display: flex;
+                flex-direction: column;
+                /* margin-top: 3; */
+
+                & .Navbar {
+                    margin-top: 2rem;
+                }
+
+                & .Navbar-braNd {
+                    text-align: center;
+                }
+            }
+
+            .face {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .col2 {
+                    text-align: center;
+                }
+
+                .grid-four-cols .about-div {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .coNtact-homepage {
+                    width: 80%;
+                    height: 87rem;
+                }
+
+
+                @media (width<730px) {
+
+                    .grid-two--cols,
+                    .grid-three-cols {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .sectioN-Navbar .coNtaiNer {
+                        display: flex;
+                        flex-direction: column;
+                        /* margin-top: 3; */
+
+                        & .Navbar {
+                            margin-top: 2rem;
+                        }
+
+                        & .Navbar-braNd {
+                            text-align: center;
+                        }
+                    }
+
+                    .face {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        .col2 {
+                            text-align: center;
+                        }
+
+                        .grid-four-cols .about-div {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .coNtact-homepage {
+                            width: 80%;
+                            height: 87rem;
+                        }
+
+                    }
+
+                    .sectioN-coNtact-homepage {
+                        width: 94%;
+                        height: auto;
+
+
+                    }
+
+                    .coNtact-coNteNt {
+                        margin-top: -39rem;
+                    }
+                }
+    </style>
+</head>
+
+<body>
+    <header class="sectioN-Navbar">
+        <div class="coNtaiNer">
+            <div class="Nav-braNd">
+                <a href="index.html"> <img src="logo.png" alt="my thapa eduhub" width="80%" height="auto"></a>
+            </div>
+            <div class="Navbar">
+                <ul>
+                    <li class="Nav-item"><a href="/" class="Nav-liNk">Home</a> </li>
+                    <li class="Nav-item"><a href="/" class="Nav-liNk">about</a></li>
+                    <li class="Nav-item"><a href="/" class="Nav-liNk">services</a></li>
+                    <li class="Nav-item"><a href="/" class="Nav-liNk">blog</a></li>
+                    <li class="Nav-item"><a href="/" class="Nav-liNk">coNtact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="sectioN-hero">
+            <div class="coNtaiNer grid grid-two--cols">
+                <div class="sectioN-hero--coNteNt" style="margin-top: -15rem;">
+                    <div class="hero-subheadiNg">EMPOWERING LIFELONG LEARNING</div>
+                    <h1 class="hero-headiNg">
+                        Unlock your Potential with Thapa Eduhub
+                    </h1>
+                    <p class="hero-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+                        expedita ex voluptatibus ea ratione vel iste aliquam doloribus ducimus fuga laborum doloremque
+                        deleniti, iure dolores magnam esse. Maxime, veritatis ab.
+
+                    </p>
+                    <div class="hero-btN">
+                        <a href="services.html" class="btN btN-white">Learn with us</a>
+                    </div>
+                </div>
+                <div class="hero-sectioN-image" style="margin-top: -8rem;">
+                    <figure>
+                        <img src="main-hero.png" alt="3d character">
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="custom-shape-divider-bottom-1720680733">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </main>
+    <section class="section-about">
+        <div class="coNtaiNer2">
+            <h2 class="sectioN-commoN-headiNg">
+                About Thapa EduHub
+            </h2>
+            <p class="sectioN-commoN-subheadiNg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, voluptatum.
+            </p>
+        </div>
+        <div class="coNtaiNer grid grid-three-cols ">
+            <div class="about-div">
+                <div class="icoN">
+                    <img src="research.png" alt="thapa">
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="about-div">
+                <div class="icoN">
+                    <img src="design.png" alt="thapa">
+                </div>
+                <h3 class="sectioN-commoN-title">Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="about-div">
+                <div class="icoN">
+                    <img src="Coding.png" alt="thapa">
+                </div>
+                <h3 class="sectioN-commoN-title">Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="section-course">
+        <div class="coNtaiNer2">
+            <h2 class="sectioN-commoN-headiNg">
+                Explore Our Courses
+            </h2>
+            <p class="sectioN-commoN-subheadiNg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, voluptatum.
+            </p>
+        </div>
+        <div class="coNtaiNer grid grid-four--cols">
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+            <div class="course-div">
+                <div class="icoN">
+                    <i class="fa-brands fa-js"></i>
+                    <!-- <img src="research.png" alt="thapa"> -->
+                </div>
+                <h3 class="sectioN-commoN-title">Research</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus ad iste accusamus
+                    necessitatibus cum beatae maiores, tempore sint corrupti et quia, rerum laudantium.</p>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class="section-why-choose">
+        <div class="coNtaiNer2">
+            <h2 class="sectioN-commoN-headiNg">
+                Why Choose Thapa Technical
+            </h2>
+            <p class="sectioN-commoN-subheadiNg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aspernatur adipisci ipsam itaque culpa?
+            </p>
+        </div>
+        <div class="face">
+            <div class="col1" style="display: flex; justify-content: center; align-items: end; width: 50%;">
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">1</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">3</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">5</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="choose-ceNter--div">
+                    <figure>
+                        <img src="mobile.png" alt="" class="thapamobile">
+                    </figure>
+                </div>
+            </div>
+            <div class="col3" style="display: flex; justify-content: center; align-items: end; width: 50%;">
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">2</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">4</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+                <div class="why-choose--div">
+                    <p class="commoN-text-highlights">5</p>
+                    <h3 style=" font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;">Expert Instructors</h3>
+                    <p style=" width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea odit quia
+                        repellat ipsam
+                        debitis.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="sectioN-coNtact-homepage">
+            <div class="coNtact-coNteNt">
+                <h2 class="coNtact-title">Let's revolutionize the way you study</h2><br><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum.</p>
+                <br>
+                <a href="coNtact.html" class="btN btN-white">Start Now</a>
+            </div>
+            <div class="coNtact-image">
+                <img src="main.png" alt="" class="img">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="coNtaiNer grid grid-four-cols ">
+            <div class="about-div">
+                <div class="first-code">
+                    <div class="icoN">
+                        <a href="#" class="footer-subheadiNg" style="font-size: 2.9rem;">Thapa EduHub</a><br>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus</p><br><br>
+                </div>
+
+                <div class="foNt-icoNs">
+                    <a href=""> <i class="fa-brands fa-instagram"></i> </a>
+                    <a href=""> <i class="fa-brands fa-github"></i></a>
+                    <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="about-div">
+                <P>Privacy</P>
+                <br>
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+            <div class="about-div">
+                <P>Blogs</P>
+                <br>
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+            <div class="about-div">
+                <P>Important</P>
+                <br>
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
